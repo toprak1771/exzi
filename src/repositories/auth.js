@@ -25,10 +25,12 @@ class Auth extends RepositoryMain {
         throw new ErrorHandler(409, "This user or identity_no already use.");
       }
 
-      const hashedPassword = await hash(data.password, 10);
+      let { newData } = await this.calculateMainModAccount(data);
+
+      const hashedPassword = await hash(newData.password, 10);
       const createUser = await prisma.user.create({
         data: {
-          ...data,
+          ...newData,
           password: hashedPassword,
         },
       });
@@ -75,6 +77,39 @@ class Auth extends RepositoryMain {
       expiresIn,
       token: sign(dataStoredInToken, secretKey, { expiresIn: expiresIn }),
     };
+  }
+
+  async calculateMainModAccount(data) {
+    if (Object.hasOwn(data, "amount")) {
+      data.main_account = data.amount;
+      data.mod_account = data.total_account - data.amount;
+      data.mod_type = await this.calculateModType(data);
+      return { newData: data };
+    } else {
+      data.main_account = Number(
+        ((data.total_account * data.percentage) / 100).toFixed(2)
+      );
+      data.mod_account = data.total_account - data.main_account;
+      data.mod_type = await this.calculateModType(data);
+      return { newData: data };
+    }
+  }
+
+  async calculateModType(data) {
+    let mod_type;
+    if (data.mod_account >= 1000 && data.mod_account < 2000) {
+      mod_type = "bronze";
+    } else if (data.mod_account >= 2000 && data.mod_account < 2500) {
+      mod_type = "silver";
+    } else if (data.mod_account >= 2500 && data.mod_account < 3000) {
+      mod_type = "gold";
+    } else if (data.mod_account >= 3000) {
+      mod_type = "diamond";
+    } else {
+      mod_type = null;
+    }
+
+    return mod_type;
   }
 }
 
