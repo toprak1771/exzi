@@ -17,3 +17,21 @@ model Test {
   id Int @id @default(autoincrement())
   title String
 }
+
+model User {
+  id Int @id @default(autoincrement())
+  password       String      @db.VarChar(255)
+  email          String       @unique @db.VarChar(255)
+  name           String       @db.VarChar(255)
+  surname        String       @db.VarChar(255)
+  identity_no    String       @unique
+  portfolio      Json?
+  total_account  Decimal @db.Decimal(10, 2)
+  main_account   Decimal? @db.Decimal(10, 2)
+  mod_account    Decimal? @db.Decimal(10, 2)
+  percentage Decimal?
+  amount Decimal?
+  mod_type String?
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
