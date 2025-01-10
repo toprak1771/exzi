@@ -29,8 +29,8 @@ model User {
   total_account  Decimal @db.Decimal(10, 2)
   main_account   Decimal? @db.Decimal(10, 2)
   mod_account    Decimal? @db.Decimal(10, 2)
-  percentage Decimal?
-  amount Decimal?
+  percentage Decimal? @db.Decimal(10, 2)
+  amount Decimal? @db.Decimal(10, 2)
   mod_type String?
   createdAt      DateTime     @default(now())
   updatedAt      DateTime     @updatedAt

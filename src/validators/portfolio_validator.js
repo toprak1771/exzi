@@ -5,4 +5,8 @@ const createValidator = [
     body("portfolio", "portfolio does not Empty").not().isEmpty().isObject(),
 ]
 
-module.exports = {createValidator};
+const updateValidator = [
+    body("portfolio", "portfolio does not Empty").not().isEmpty().isObject(),
+]
+
+module.exports = {createValidator,updateValidator};

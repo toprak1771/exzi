@@ -1,7 +1,7 @@
 const express = require("express");
 const PortfolioController = require("../controllers/portfolio");
 const Portfolio = require("../repositories/portfolio");
-const {createValidator} = require("../validators/portfolio_validator");
+const {createValidator,updateValidator} = require("../validators/portfolio_validator");
 const  {authMiddleWare} = require("../middlewares/auth.middleware")
 
 class PortfolioRoute {
@@ -14,7 +14,9 @@ class PortfolioRoute {
      }
 
     initializeRoutes(){
+        this.router.get(`${this.path}/getAll`,this.portfolioController.getAll);
         this.router.post(`${this.path}/create`,createValidator,authMiddleWare,this.portfolioController.create);
+        this.router.put(`${this.path}/update`,updateValidator,authMiddleWare,this.portfolioController.update);
      }
 }
 

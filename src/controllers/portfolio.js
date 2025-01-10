@@ -29,6 +29,39 @@ class PortfolioController extends ControllerMain {
     }
   };
 
+  getAll = async (req, res, next) => {
+    try {
+      const getAllPortfolio = await this._portfolioRepository.getAll();
+      
+      res.status(200).json({
+        message:'Get all portfolio data.',
+        getAllPortfolio
+      })
+    } catch (error) {
+      next(new ErrorHandler(error?.status, error.message));
+      return; 
+    }
+  }
+
+  update = async (req,res,next) => {
+    try {
+      const errors = validationResult(req);
+      if (errors.errors && errors.errors.length > 0) {
+        await validationErrors(errors);
+        return;
+      }
+      req.body.total_account = Number(req.user.total_account);
+      const updatedPortfolio = await this._portfolioRepository.update(req.body,req.user.id);
+      res.status(200).json({
+        message:'Updated portfolio.',
+        updatedPortfolio
+      })
+    } catch (error) {
+      next(new ErrorHandler(error?.status, error.message));
+      return;
+    }
+  }
+
 }
 
 module.exports = PortfolioController;
