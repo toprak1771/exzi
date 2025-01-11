@@ -1,4 +1,5 @@
 Project Setup
+TR
 Öncelikle .env dosyası ekleyerek burada DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
 Kendi postgresql bilgilerimizle dolduruyoruz.
 Daha sonra jwt işlemleri için SECRET_KEY=****** ekliyoruz.
@@ -69,8 +70,10 @@ Simulator
 controllers dosyası içinde yazdığım simulatorMod adlı fonksiyon öncelikle tüm kullanıcıların sıfırlanmış hesaplarıyla ilgili amount veya percentage ile tekrar hesapların tutarını belirliyor,Daha sonra OOP prensipleri ile User sınıfından yeni random kullanıcılar üreterek bunları db’ye kaydediyor.
 Bu kullanıcıların her 5 saatde bir mod_type’leri ile beraber gelirlerini hesaplayıp mod_income’a aktarıyor ve mail atıyor(sendgrid yapısını kullandım,key ekleyerek çalıştırılabilir.
 Şu an key sildiğim için yorum satırında bu kısım.) Daha sonra her kullanıcının hesaplarını her ay bunu yapacak şekilde dengeleyip toplam hesaba aktarıyor.
-------------------------------------------------------------------------------
 
+
+------------------------------------------------------------------------------
+EN
 
 Project Setup
 First, we add a .env file and fill in the PostgreSQL information with our own credentials as follows:
