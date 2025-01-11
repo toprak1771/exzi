@@ -116,57 +116,6 @@ Users can log in by sending a POST request with the following body:
 }
 This will return a token, and for portfolio APIs, the token is used to find the user and update their data accordingly.
 
-Here's the full translation of your provided text into English:
-
-Project Setup
-First, we add a .env file and fill in the PostgreSQL information with our own credentials as follows:
-
-makefile
-Kodu kopyala
-DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
-Next, we add SECRET_KEY=****** for JWT operations.
-
-To run the database migrations, we use the following command:
-
-csharp
-Kodu kopyala
-npx prisma migrate dev --name init
-Before starting the project, install Docker on your computer and use the following command to start the Redis container from the docker-compose.yaml file:
-
-Kodu kopyala
-docker-compose up -d redis
-Once the Redis container is up, we start the project with:
-
-arduino
-Kodu kopyala
-npm run dev
-Create User and Login
-/auth/register API
-We can register a user by sending a POST request with the following body:
-
-json
-Kodu kopyala
-{
-    "name": "Test 2",
-    "surname": "Test 2",
-    "password": "123456",
-    "identity_no": "123453434",
-    "total_account": 3000,
-    "email": "test1@mail.com",
-    "amount": 1500
-}
-On the backend, when registering the user, the amount or percentage will determine how much of the money goes into the mod account and the mod type.
-
-/auth/login API
-Users can log in by sending a POST request with the following body:
-
-json
-Kodu kopyala
-{
-    "password": "123456",
-    "email": "toprak1734@test.com"
-}
-This will return a token, and for portfolio APIs, the token is used to find the user and update their data accordingly.
 
 Portfolio
 Create Portfolio
