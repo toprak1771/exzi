@@ -1,9 +1,9 @@
 class ControllerMain {
-    create = async() => {}
-    delete = async () => {}
-    update = async () => {}
+    create = async(data) => {}
+    delete = async (data) => {}
+    update = async (data) => {}
     getAll = async () => {}
-    getById = async() => {}
+    getById = async(data) => {}
   }
   
   module.exports = ControllerMain;

@@ -1,0 +1,200 @@
+[
+    {
+      "name": "John",
+      "surname": "Doe",
+      "email": "john.doe@example.com",
+      "identity_no": "12345678901",
+      "sales": {
+        "BTC": "100USDT",
+        "ETH": "200USDT",
+        "DASH": "150USDT",
+        "DOGE": "50USDT",
+        "XRP": "90USDT"
+      },
+      "buy": {
+        "BTC": "90USDT",
+        "ETH": "180USDT",
+        "LTC": "120USDT",
+        "DOGE": "40USDT"
+      },
+      "createdAt": "2024-01-10T10:00:00Z",
+      "updatedAt": "2024-01-11T10:00:00Z"
+    },
+    {
+      "name": "Jane",
+      "surname": "Smith",
+      "email": "jane.smith@example.com",
+      "identity_no": "98765432109",
+      "sales": {
+        "BTC": "300USDT",
+        "ETH": "400USDT",
+        "XRP": "200USDT",
+        "DOGE": "50USDT",
+        "LTC": "120USDT"
+      },
+      "buy": {
+        "BTC": "250USDT",
+        "ETH": "350USDT",
+        "DASH": "100USDT",
+        "LTC": "80USDT"
+      },
+      "createdAt": "2024-01-10T11:00:00Z",
+      "updatedAt": "2024-01-11T11:00:00Z"
+    },
+    {
+      "name": "Alice",
+      "surname": "Johnson",
+      "email": "alice.johnson@example.com",
+      "identity_no": "11122233344",
+      "sales": {
+        "ETH": "500USDT",
+        "XRP": "300USDT",
+        "DOGE": "100USDT",
+        "LTC": "150USDT",
+        "BTC": "450USDT"
+      },
+      "buy": {
+        "BTC": "400USDT",
+        "ETH": "480USDT",
+        "XRP": "280USDT",
+        "DASH": "200USDT"
+      },
+      "createdAt": "2024-01-10T12:00:00Z",
+      "updatedAt": "2024-01-11T12:00:00Z"
+    },
+    {
+      "name": "Bob",
+      "surname": "Williams",
+      "email": "bob.williams@example.com",
+      "identity_no": "22233344455",
+      "sales": {
+        "BTC": "700USDT",
+        "DOGE": "120USDT",
+        "ETH": "250USDT",
+        "LTC": "180USDT"
+      },
+      "buy": {
+        "ETH": "300USDT",
+        "DASH": "100USDT",
+        "XRP": "90USDT",
+        "DOGE": "50USDT"
+      },
+      "createdAt": "2024-01-10T13:00:00Z",
+      "updatedAt": "2024-01-11T13:00:00Z"
+    },
+    {
+      "name": "Emily",
+      "surname": "Brown",
+      "email": "emily.brown@example.com",
+      "identity_no": "33344455566",
+      "sales": {
+        "ETH": "450USDT",
+        "XRP": "220USDT",
+        "DOGE": "90USDT"
+      },
+      "buy": {
+        "BTC": "500USDT",
+        "DOGE": "120USDT",
+        "ETH": "320USDT",
+        "DASH": "200USDT"
+      },
+      "createdAt": "2024-01-10T14:00:00Z",
+      "updatedAt": "2024-01-11T14:00:00Z"
+    },
+    {
+      "name": "Chris",
+      "surname": "Taylor",
+      "email": "chris.taylor@example.com",
+      "identity_no": "44455566677",
+      "sales": {
+        "BTC": "400USDT",
+        "DOGE": "80USDT",
+        "LTC": "130USDT",
+        "ETH": "200USDT"
+      },
+      "buy": {
+        "BTC": "350USDT",
+        "ETH": "270USDT",
+        "DOGE": "70USDT"
+      },
+      "createdAt": "2024-01-10T15:00:00Z",
+      "updatedAt": "2024-01-11T15:00:00Z"
+    },
+    {
+      "name": "Sophia",
+      "surname": "Martinez",
+      "email": "sophia.martinez@example.com",
+      "identity_no": "55566677788",
+      "sales": {
+        "ETH": "600USDT",
+        "XRP": "200USDT",
+        "DOGE": "110USDT",
+        "DASH": "150USDT"
+      },
+      "buy": {
+        "BTC": "580USDT",
+        "DOGE": "150USDT",
+        "XRP": "220USDT",
+        "ETH": "510USDT"
+      },
+      "createdAt": "2024-01-10T16:00:00Z",
+      "updatedAt": "2024-01-11T16:00:00Z"
+    },
+    {
+      "name": "Michael",
+      "surname": "Davis",
+      "email": "michael.davis@example.com",
+      "identity_no": "66677788899",
+      "sales": {
+        "BTC": "450USDT",
+        "ETH": "300USDT",
+        "DOGE": "140USDT"
+      },
+      "buy": {
+        "BTC": "400USDT",
+        "ETH": "290USDT",
+        "XRP": "150USDT"
+      },
+      "createdAt": "2024-01-10T17:00:00Z",
+      "updatedAt": "2024-01-11T17:00:00Z"
+    },
+    {
+      "name": "Olivia",
+      "surname": "Clark",
+      "email": "olivia.clark@example.com",
+      "identity_no": "77788899900",
+      "sales": {
+        "ETH": "400USDT",
+        "DASH": "150USDT",
+        "DOGE": "130USDT"
+      },
+      "buy": {
+        "BTC": "380USDT",
+        "ETH": "370USDT",
+        "LTC": "200USDT"
+      },
+      "createdAt": "2024-01-10T18:00:00Z",
+      "updatedAt": "2024-01-11T18:00:00Z"
+    },
+    {
+      "name": "Ethan",
+      "surname": "Johnson",
+      "email": "ethan.johnson@example.com",
+      "identity_no": "88899900011",
+      "sales": {
+        "BTC": "500USDT",
+        "ETH": "550USDT",
+        "DOGE": "250USDT",
+        "LTC": "300USDT"
+      },
+      "buy": {
+        "BTC": "470USDT",
+        "ETH": "530USDT",
+        "DASH": "190USDT",
+        "DOGE": "220USDT"
+      },
+      "createdAt": "2024-01-10T19:00:00Z",
+      "updatedAt": "2024-01-11T19:00:00Z"
+    }
+  ]
+  

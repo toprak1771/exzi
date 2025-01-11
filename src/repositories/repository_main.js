@@ -1,9 +1,9 @@
 class RepositoryMain {
-  async create() {}
-  async delete() {}
-  async update() {}
+  async create(data) {}
+  async delete(data) {}
+  async update(data) {}
   async getAll() {}
-  async getById() {}
+  async getById(data) {}
 }
 
 module.exports = RepositoryMain;

@@ -31,7 +31,19 @@ model User {
   mod_account    Decimal? @db.Decimal(10, 2)
   percentage Decimal? @db.Decimal(10, 2)
   amount Decimal? @db.Decimal(10, 2)
+  mod_income Decimal? @db.Decimal(10, 2)
   mod_type String?
   createdAt      DateTime     @default(now())
   updatedAt      DateTime     @updatedAt
+  transaction Transaction[]
+}
+
+model Transaction {
+  id Int @id @default(autoincrement())
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  sales Json
+  buy Json
+  user_id  Int 
+  user User @relation(fields:[user_id],references:[id])
 }

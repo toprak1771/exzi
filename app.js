@@ -4,7 +4,9 @@ require("dotenv").config();
 const TestRoute = require("./src/routes/test_route");
 const {handleError} = require("./src/utils/errorhandler");
 const AuthRoute = require("./src/routes/auth_route");
+const TransactionRoute = require("./src/routes/transaction_route");
 const PortfolioRoute = require("./src/routes/portfolio_route");
+require("./src/controllers/simulator");
 const app = express();
 
 const port = 3000;
@@ -18,7 +20,7 @@ app.get('/',(req,res) => {
     res.send("Hello world");
 })
 
-initializeRoutes([new TestRoute(),new AuthRoute(),new PortfolioRoute()]);
+initializeRoutes([new TestRoute(),new AuthRoute(),new PortfolioRoute(),new TransactionRoute()]);
 
 function initializeRoutes(routes) {
     routes.forEach((route) => {

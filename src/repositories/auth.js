@@ -8,6 +8,7 @@ const prisma = new PrismaClient();
 const SECRET_KEY = process.env.SECRET_KEY;
 
 class Auth extends RepositoryMain {
+
   async register(data) {
     try {
       const findUser = await prisma.user.findFirst({
@@ -36,6 +37,28 @@ class Auth extends RepositoryMain {
       });
 
       return createUser;
+    } catch (error) {
+      console.error("Hata:", error);
+      throw new ErrorHandler(500, error.message);
+    }
+  }
+
+  async getAll() {
+    try {
+      const getAllUsers = await prisma.user.findMany();
+      return getAllUsers;
+    } catch (error) {
+      console.error("Hata:", error);
+      throw new ErrorHandler(500, error.message);
+    }
+  }
+
+  async createMany(data) {
+    try {
+      const createdManyUser = await prisma.user.createMany({
+        data:data
+      });
+      return createdManyUser;
     } catch (error) {
       console.error("Hata:", error);
       throw new ErrorHandler(500, error.message);
@@ -77,6 +100,22 @@ class Auth extends RepositoryMain {
       expiresIn,
       token: sign(dataStoredInToken, secretKey, { expiresIn: expiresIn }),
     };
+  }
+
+  async update(user){
+    console.log("updateUserr:",user);
+    try {
+      const updatedUser = await prisma.user.update({
+        where:{
+          id:user.id
+        },
+        data:user
+      })
+      return updatedUser;
+    } catch (error) {
+      console.error("Hata:", error);
+      throw new ErrorHandler(500, error.message);
+    }
   }
 
   async calculateMainModAccount(data) {
