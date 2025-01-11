@@ -1,7 +1,6 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
-const TestRoute = require("./src/routes/test_route");
 const {handleError} = require("./src/utils/errorhandler");
 const AuthRoute = require("./src/routes/auth_route");
 const TransactionRoute = require("./src/routes/transaction_route");
@@ -20,7 +19,7 @@ app.get('/',(req,res) => {
     res.send("Hello world");
 })
 
-initializeRoutes([new TestRoute(),new AuthRoute(),new PortfolioRoute(),new TransactionRoute()]);
+initializeRoutes([new AuthRoute(),new PortfolioRoute(),new TransactionRoute()]);
 
 function initializeRoutes(routes) {
     routes.forEach((route) => {
