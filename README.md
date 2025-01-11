@@ -11,6 +11,7 @@ Redis container ayağa kalktıktan sonra npm run dev ile projeyi ayağa kaldır�
 
 Create User and Login
 /auth/register apisi ile 
+
 {
     "name":"Test 2",
     "surname":"Test 2",
@@ -21,6 +22,7 @@ Create User and Login
     "amount":1500
     //"percentage":24
 }
+
 Body ile kullanıcı kayıt edebiliyoruz, arka tarafda bu kullanıcı kayıt edilirken amount veya percentage’ye göre mod hesabına gidecek parayı ve mod tipini belirliyor.
 
 /auth/login apisi ile 
