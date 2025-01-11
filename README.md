@@ -37,7 +37,8 @@ Giriş yapabiliyoruz ve token alabiliyoruz, portfolio apilerinde bu token ile ku
 Portfolio
 
 Create Portfolio
-/portfolio/create apisi ile Authorization’a Bearer token ekleyerek gönderilen bu istekde 
+/portfolio/create apisi ile Authorization’a Bearer token ekleyerek gönderilen bu istekde
+
 {
    "portfolio":{
     "BTC":22,
