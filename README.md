@@ -49,7 +49,8 @@ Create Portfolio
 Örnek body ile ilgili kullanıcının database’de portfolio’su oluşuyor ve data redis cacheleniyor.
 
 Update Portfolio
-/portfolio/update apisi ile Authorization’a Bearer token ekleyerek gönderilen bu istekde 
+/portfolio/update apisi ile Authorization’a Bearer token ekleyerek gönderilen bu istekde
+
 {
    "portfolio":{
     "BTC":17,
