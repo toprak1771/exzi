@@ -53,6 +53,21 @@ class Auth extends RepositoryMain {
     }
   }
 
+  async rebalance(){
+    try {
+      const rebalancedUsers = await prisma.user.updateMany({
+        data:{
+          mod_account:0,
+          main_account:0
+        }
+      })
+      return rebalancedUsers;
+    } catch (error) {
+      console.error("Hata:", error);
+      throw new ErrorHandler(500, error.message);
+    }
+  }
+
   async createMany(data) {
     try {
       const createdManyUser = await prisma.user.createMany({
@@ -147,7 +162,6 @@ class Auth extends RepositoryMain {
     } else {
       mod_type = null;
     }
-
     return mod_type;
   }
 }

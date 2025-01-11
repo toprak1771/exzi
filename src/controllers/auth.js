@@ -49,6 +49,19 @@ class AuthController extends ControllerMain {
     }
   };
 
+  getAll = async (req,res,next) => {
+    try {
+      const getAllUsers = await this._authRepository.getAll();
+      res.status(200).json({
+        message:'User get all succesfully for analythics.',
+        getAllUsers,
+      })
+    } catch (error) {
+      next(new ErrorHandler(error?.status, error.message));
+      return;
+    }
+  } 
+
   
 }
 

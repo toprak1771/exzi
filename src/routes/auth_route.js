@@ -13,6 +13,7 @@ class AuthRoute {
      }
 
     initializeRoutes(){
+        this.router.get(`${this.path}/analytics`,this.authController.getAll);
         this.router.post(`${this.path}/register`,createValidator,this.authController.create);
         this.router.post(`${this.path}/login`,loginValidator,this.authController.login);
      }
